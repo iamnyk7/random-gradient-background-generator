@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1.0, initial-scale=1.0">
+    <title>Random gradient background generator</title>
+ 
+</head>
+<body>
+    <button type="submit" onclick=changebg()>Change</button>
+    <h1 id="colname"></h1>
+    <script>
+        function changebg() {
+        let d="to right"
+           let r=Math.floor(Math.random()*256)
+           let g=Math.floor(Math.random()*256)
+           let b=Math.floor(Math.random()*256)
+           let o=Math.random()
+           let col1="rgb("+r+","+g+","+b+","+o+")"
+
+           let k=Math.floor(Math.random()*256)
+           let l=Math.floor(Math.random()*256)
+           let m=Math.floor(Math.random()*256)
+           let O=Math.random()
+           let col2="rgb("+k+","+l+","+m+","+O+")"
+
+           let lg="background:linear-gradient("+d+","+col1+","+col2+")"
+
+           document.body.style=lg
+           document.getElementById("colname").innerHTML=lg
+        }
+    </script>
+</body>
+</html>
